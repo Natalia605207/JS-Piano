@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #EBEDFB;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    padding: 35px 40px;
+    border-radius: 20px;
+    background: linear-gradient(#3f2040, #070007);
+    box-shadow: 1px 1px 10px #000;
+}
+
+.top-panel {
+    display: flex;
+    color: #F1FAFF;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-size: 27px;
+    font-family: "Rock Salt", cursive;
+    text-shadow: 1px 1px 20px #000;
+    color:#f9ad23;
+}
+
+.volume-span, .showKeys-span {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #E8D5B5;
+}
+
+#volumeRange-input {
+    outline: none;
+    border-radius: 30px;
+    accent-color: #DEA01E;
+}
+
+#showKeys-input {
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    border-radius: 30px;
+    position: relative;
+    background: #4B4B4B;
+    color: #DEA01E;
+}
+
+#showKeys-input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E8D5B5;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+#showKeys-input:checked::before {
+    left: 35px;
+    background: #DEA01E;
+}
+
+.piano-keys {
+    display: flex;
+    list-style: none;
+    margin-top: 40px;
+}
+
+.key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.black {
+    z-index: 10;
+    height: 140px;
+    width: 44px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0px 0px 5px 5px;
+    background: linear-gradient(#333, #000);
+}
+
+.black.active {
+    box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+    background:linear-gradient(to bottom, #000, #434343);
+}
+
+.white {
+    height: 230px;
+    width: 70px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.white.active {
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.key-name {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: #A2A2A2;
+    font-size: 25px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+@media all and (max-width: 815px) {
+    .container {
+        padding: 25px;
+    }
+
+    .top-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3, .center {
+        margin-bottom: 13px;
+    }
+
+    #volumeRange-input {
+        max-width: 100px;
+    }
+
+    .piano-keys {
+        margin-top: 20px;
+    }
+
+    .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+        display: none;
+    }
+
+    .black {
+        height: 100px;
+        width: 40px;
+        margin: 0 -20px 0 -20px;
+    }
+
+    .white {
+        height: 180px;
+        width: 60px;
+    }
+}
+
+@media all and (max-width: 615px) {
+    .piano-keys .key:nth-child(13),
+    .piano-keys .key:nth-child(14),
+    .piano-keys .key:nth-child(15),
+    .piano-keys .key:nth-child(16),
+    .piano-keys .key:nth-child(17) {
+        display: none;
+    }
+
+    .white {
+        width: 50px;
+    }
+
+    .key-name {
+        font-size: 20px;
+    }
+} 

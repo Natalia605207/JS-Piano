@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Piano</title>
+      <link rel="icon" href="data:,">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Rock+Salt&display=swap" rel="stylesheet">
+   </head>
+   <body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
+      <div class="container" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500">
+         <div class="top-panel">
+            <h3>Your Piano</h3>
+            <div class="center">
+               <span class="volume-span">Volume</span><input id="volumeRange-input" type="range" min="0" max="1" value="0.5" step="any">
+            </div>
+            <div class="center">
+               <span class="showKeys-span">Show Keys</span><input id="showKeys-input" type="checkbox" checked>
+            </div>
+        </div>
+         <ul class="piano-keys">
+            <li class="key white" data-key="a"><span class="key-name">a</span></li>
+            <li class="key black" data-key="w"><span class="key-name">w</span></li>
+            <li class="key white" data-key="s"><span class="key-name">s</span></li>
+            <li class="key black" data-key="e"><span class="key-name">e</span></li>
+            <li class="key white" data-key="d"><span class="key-name">d</span></li>
+            <li class="key white" data-key="f"><span class="key-name">f</span></li>
+            <li class="key black" data-key="t"><span class="key-name">t</span></li>
+            <li class="key white" data-key="g"><span class="key-name">g</span></li>
+            <li class="key black" data-key="y"><span class="key-name">y</span></li>
+            <li class="key white" data-key="h"><span class="key-name">h</span></li>
+            <li class="key black" data-key="u"><span class="key-name">u</span></li>
+            <li class="key white" data-key="j"><span class="key-name">j</span></li>
+            <li class="key white" data-key="k"><span class="key-name">k</span></li>
+            <li class="key black" data-key="o"><span class="key-name">o</span></li>
+            <li class="key white" data-key="l"><span class="key-name">l</span></li>
+            <li class="key black" data-key="p"><span class="key-name">p</span></li>
+            <li class="key white" data-key="m"><span class="key-name">m</span></li>
+         </ul>
+      </div>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="index.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
+</html>
